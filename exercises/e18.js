@@ -7,10 +7,34 @@
 
 export function joinToString(array, separator) {
   // Your code goes here...
-
+  let result = '';
+  for (let item of array) {
+    if (array[array.length - 1] === item) {
+      result += item;
+    } else if (array[array.length - 2] === item) {
+      result += item;
+    } else {
+      result += item + separator;
+    }
+  }
+  return result;
 }
 
+// LOGIC FOR FUNCTION AS DESCRIBED BY MDN
+//     VVVVVVVVVVVVVVVVVVVVVVVVVV
 
+// export function joinToString(array, separator) {
+//   // Your code goes here...
+//   let result = '';
+//   for (let item of array) {
+//     if (array[array.length - 1] === item) {
+//       result += item;
+//     } else {
+//       result += item + separator;
+//     }
+//   }
+//   return result;
+// }
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-18"

@@ -6,7 +6,12 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  let result = [[], []];
+  for (let item of array) {
+    if (item.toLowerCase().includes('a')) result[0].push(item);
+    else result[1].push(item);
+  }
+  return result;
 }
 
 
